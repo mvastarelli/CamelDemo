@@ -1,5 +1,6 @@
 - route:
     id: fileMover
+    autoStartup: false
     from:
       uri: "file://C:/temp/in"
       steps:
