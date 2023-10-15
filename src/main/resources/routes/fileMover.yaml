@@ -1,0 +1,13 @@
+- route:
+    id: fileMover
+    from:
+      uri: "file://C:/temp/in"
+      steps:
+        - log: "Received ${body.fileName}"
+        - process:
+            ref: "hasher"
+        - log: "File hashed to ${exchangeProperty.hash}"
+        - to: "file://C:/temp/out"
+        - setBody:
+            simple: "${exchangeProperty.hash}"
+        - to: "file://C:/temp/out?filename=${file:name}.sha1"

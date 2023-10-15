@@ -1,0 +1,8 @@
+camel:
+  springboot:
+    routes-include-pattern: classpath:routes/*.yaml
+    routes-reload-enabled: true
+    routes-reload-directory: src/main/resources/routes
+    routes-reload-pattern: '*.yaml'
+hasher:
+  algorithm: 'md5'
