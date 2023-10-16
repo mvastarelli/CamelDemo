@@ -1,3 +1,7 @@
+spring:
+  output:
+    ansi:
+      enabled: always
 camel:
   springboot:
     routes-include-pattern: classpath:routes/*.yaml

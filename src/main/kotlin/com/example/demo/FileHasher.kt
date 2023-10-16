@@ -12,3 +12,4 @@ abstract class FileHasher : Processor {
         exchange.setProperty("hash", calculateHash(path))
     }
 }
+
